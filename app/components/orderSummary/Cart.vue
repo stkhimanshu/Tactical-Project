@@ -1,6 +1,7 @@
 <script setup>
 import { useCartStore } from "../../../stores/index";
 const cartStore = useCartStore();
+import {PaymentInfo} from '../form/export';
 </script>
 
 <template>
@@ -47,5 +48,9 @@ const cartStore = useCartStore();
             </div>
 
         </section>
+
+        <!-- Another Section -->
+         <SectionLabel class="mt-4" title="Step 3: Payment Information"/>
+         <PaymentInfo/>
     </div>
 </template>
