@@ -122,7 +122,8 @@ async function submitLead() {
         <input @blur="submitLead" v-model="formStore.formSchema.emailAddress" type="email"
             placeholder="Email (For Order Confirmation)"
             class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-blue-400 m-1">
-        <input @blur="submitLead" v-model="formStore.formSchema.phoneNumber" type="phone" placeholder="Phone (For Courier Delivery)"
+        <input @blur="submitLead" v-model="formStore.formSchema.phoneNumber" type="phone"
+            placeholder="Phone (For Courier Delivery)"
             class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-blue-400 m-1">
         <input @blur="submitLead" v-model="formStore.formSchema.address1" type="text" placeholder="Address"
             class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-blue-400 m-1">
@@ -141,7 +142,7 @@ async function submitLead() {
             </select>
             <input @blur="submitLead" v-model="formStore.formSchema.postalCode" type="number" placeholder="Postal Code"
                 class="w-full border border-gray-300 rounded-lg px-4 py-3 m-1 focus:outline-none focus:ring-2 focus:ring-blue-400" />
-<!-- 
+            <!-- 
             <button type="button" @click="submitLead" class="w-full bg-blue-600 text-white py-3 rounded-lg mt-4">
                 Continue
             </button> -->

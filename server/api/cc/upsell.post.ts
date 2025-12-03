@@ -10,13 +10,12 @@ export default defineEventHandler(async (event) => {
         campaignId: runtime.public.CC_CAMPAIGN_ID,
         ...body
     })
-    const url = `${base}/order/import/?${params.toString()}`;
-    console.log("URLLLLL", url)
+    const url = `${base}/upsale/import/?${params.toString()}`;
+    console.log("UPSELL URL:", url);
     try {
-        let response: any = await $fetch(url, { method: 'GET' });
-        console.log("responseeeeeee", response)
-        return JSON.parse(response)
+        const response: any = await $fetch(url, { method: "GET" });
+        return JSON.parse(response);
     } catch (err: any) {
-        return { error: true, message: err?.message || 'Network Error' };
+        return { error: true, message: err?.message || "Network Error" };
     }
 })

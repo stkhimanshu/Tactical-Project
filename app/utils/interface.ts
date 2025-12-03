@@ -21,6 +21,7 @@ export interface FormData {
 
     sameAddress: boolean;
 
+    billShipSame: boolean; 
     billingFirstName: string;
     billingLastName: string;
     billingAddress1: string;

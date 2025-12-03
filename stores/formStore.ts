@@ -22,6 +22,7 @@ export const useFormStore = defineStore("form", () => {
     shippingId: "",
 
     sameAddress: true,
+    billShipSame: true,
     billingFirstName: "",
     billingLastName: "",
     billingAddress1: "",

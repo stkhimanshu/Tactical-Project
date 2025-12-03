@@ -48,7 +48,7 @@ export default defineEventHandler(async (event) => {
     const url = `${base}/leads/import/?${params.toString()}`
     try {
 
-        let response: string = await $fetch(url, { method: 'GET' });
+        let response: any = await $fetch(url, { method: 'GET' });
         return JSON.parse(response)
     } catch (err: any) {
         return { error: true, message: err?.message || 'Network Error' };
