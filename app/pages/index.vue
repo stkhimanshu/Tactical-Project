@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import FormComponents from './FormComponents.vue';
+import UpsellPage from './UpsalePage.vue';
 
 </script>
 
