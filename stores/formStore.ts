@@ -33,6 +33,7 @@ export const useFormStore = defineStore("form", () => {
     billingPostalCode: "",
 
     discountCode: "",
+    couponCode: "",
 
     paymentMethod: "CREDITCARD",
     cardNumber: "",

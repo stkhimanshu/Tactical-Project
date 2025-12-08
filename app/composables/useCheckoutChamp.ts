@@ -19,12 +19,19 @@ export function useCheckoutChamp() {
         })
     }
 
-    const importUpsell = async(payload: any)=>{
+    const importUpsell = async (payload: any) => {
         return await $fetch('/api/cc/upsell', {
             method: "POST",
             body: payload
         })
     }
 
-    return { importClick, importLead, importOrder, importUpsell }
+    const applyCoupon = async (payload: any) => {
+        return await $fetch("/api/cc/coupon", {
+            method: "POST",
+            body: payload
+        });
+    }
+
+    return { importClick, importLead, importOrder, importUpsell, applyCoupon }
 }

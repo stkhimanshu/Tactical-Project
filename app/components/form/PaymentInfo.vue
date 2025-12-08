@@ -2,7 +2,7 @@
 // import { useFormStore } from "../../../stores/index";
 import { useCheckoutChamp } from '~/composables/useCheckoutChamp'
 import { useFormStore } from '~~/stores/formStore';
-const { importOrder } = useCheckoutChamp()
+const { importOrder } = useCheckoutChamp();
 const formStore = useFormStore();
 const sessionId = ref('' as string)
 const emit = defineEmits(["Checkout"])
@@ -38,7 +38,7 @@ async function submitOrder() {
   }
   console.log("ORDER PAYLOAD", payload);
   const response = await importOrder(JSON.stringify(payload));
-  // console.log("Order Import Response:", response);
+  console.log("Order Import Response:", response);
 
   if (response?.result === "SUCCESS" && response?.message?.orderId) {
     localStorage.setItem("orderId", response.message.orderId);

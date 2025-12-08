@@ -1,5 +1,6 @@
 export default defineEventHandler(async (event) => {
     const body = await readBody<Record<string, any>>(event);
+    console.log("ORDER BODY", body);
     const runtime = useRuntimeConfig();
 
     const base = runtime.public.checkoutChampApiBase || 'https://api.checkoutchamp.com';
@@ -11,10 +12,9 @@ export default defineEventHandler(async (event) => {
         ...body
     })
     const url = `${base}/order/import/?${params.toString()}`;
-    console.log("URLLLLL", url)
+    // console.log("URLLLLL", url)
     try {
         let response: any = await $fetch(url, { method: 'GET' });
-        console.log("responseeeeeee", response)
         return JSON.parse(response)
     } catch (err: any) {
         return { error: true, message: err?.message || 'Network Error' };

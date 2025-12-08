@@ -38,6 +38,7 @@ export interface FormData {
     productQty: number;
 
     discountCode: string;
+    couponCode: string;
 
     paymentMethod: string;
     cardNumber: string;
